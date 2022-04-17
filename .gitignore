@@ -33,3 +33,6 @@ makefile
 *.pkl
 *.zip
 *.csv
+
+!realloc.csv
+!char_by_ring.png
