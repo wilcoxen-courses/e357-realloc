@@ -43,6 +43,15 @@ slices = zips.overlay(county,how='union',keep_geom_type=True)
 print( '\nSlice results:' )
 print( slices['COUNTYFP'].value_counts(dropna=False) )
 
+#
+#  Remove slice that corresponds to large lakes that don't have zip codes
+#
+
+print( '\nSlice with no zip:' )
+print( slices[ slices['ZCTA5CE10'].isna() ] )
+
+slices = slices.dropna(subset='ZCTA5CE10')
+
 #%%
 #
 #  For convenience when plotting, fill in the county for the slices
