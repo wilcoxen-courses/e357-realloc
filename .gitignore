@@ -34,5 +34,6 @@ makefile
 *.zip
 *.csv
 
+!demo.gpkg
 !realloc.csv
 !char_by_ring.png
