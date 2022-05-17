@@ -97,7 +97,7 @@ There are four deliverables: two scripts, **pop_by_bg.py** and **realloc.py**, o
 
     1. Set column `v` in `realloc` to the result of calling `.mul()` on `slices[v]` using two arguments: `area_share` and `axis='index'`. That will create a column where each slice has its share of the corresponding block group variable.
 
-1. Now aggregate the whole thing up to the ring level. Set `ring_info` to the result of calling `.groupby('radius').sum()` on `slices`.
+1. Now aggregate the whole thing up to the ring level. Set `ring_info` to the result of calling `.groupby('radius').sum()` on `realloc`.
 
     _Calculate county values for reference:_
 
