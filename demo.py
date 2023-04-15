@@ -113,6 +113,6 @@ ax1.axis('off')
 #  Save everything for use with QGIS
 #
 
-zips.to_file('demo-output.gpkg',layer='zips',index=False)
-county.to_file('demo-output.gpkg',layer='county',index=False)
-slices.to_file('demo-output.gpkg',layer='slices',index=False)
+zips.to_file('demo-output.gpkg',layer='zips')
+county.to_file('demo-output.gpkg',layer='county')
+slices.to_file('demo-output.gpkg',layer='slices')
