@@ -103,15 +103,15 @@ There are four deliverables: two scripts, **pop_by_bg.py** and **realloc.py**, o
 
 1. For convenience in graphing the results later, calculate the totals for the county by setting `co_totals` equal to `ring_info.sum()`. If all has gone well, the values in `ring_info` should match the result of adding up the original data via `pop.sum()`.
 
-1. Set `co_pct_poc` equal to 100 times the result of dividing the `'pop_poc'` element of `co_totals` by the `'pop_total'` element.
+1. Set `co_pct_poc` equal to 100 times the result of dividing the `'pop_poc'` column of `co_totals` by the `'pop_total'` column.
 
-1. Set `co_pct_rental` equal to 100 times the result of dividing the `'housing_rental'` element of `co_totals` by the `'housing_total'` element.
+1. Set `co_pct_rental` equal to 100 times the result of dividing the `'housing_rental'` column of `co_totals` by the `'housing_total'` column.
 
     _Calculate characteristics by ring and write out the results:_
 
-1. Now set the `'pct_poc'` column of `ring_info` to 100 times the result of dividing the `'pop_poc'` element of `ring_info` by the `'pop_total'` element.
+1. Now set the `'pct_poc'` column of `ring_info` to 100 times the result of dividing the `'pop_poc'` column of `ring_info` by the `'pop_total'` column.
 
-1. Set the `'pct_rental'` column of `ring_info` to 100 times the result of dividing the `'housing_rental'` element of `ring_info` by the `'housing_total'` element.
+1. Set the `'pct_rental'` column of `ring_info` to 100 times the result of dividing the `'housing_rental'` column of `ring_info` by the `'housing_total'` column.
 
 1. Use `.to_csv()` to write `ring_info` to a CSV file called `"realloc.csv"`. Don't use `index=False` since the index is important.
 
