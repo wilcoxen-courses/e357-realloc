@@ -2,7 +2,7 @@
 demo.py
 Spring 2022 PJW
 
-Demonstrate intersecting polygons and allocating populations in 
+Demonstrate intersecting polygons and allocating populations in
 proportion to area.
 """
 
@@ -10,7 +10,7 @@ import geopandas as gpd
 import matplotlib.pyplot as plt
 
 #%%
-#  
+#
 #  Set up file names
 #
 
@@ -24,7 +24,7 @@ out_file = 'demo-output.gpkg'
 county = gpd.read_file(demo_file,layer='county')
 zips   = gpd.read_file(demo_file,layer='zips')
 
-#  
+#
 #  Compute the area of zips
 #
 
