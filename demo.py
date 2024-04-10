@@ -32,7 +32,14 @@ zips['z_area'] = zips.area
 
 #%%
 #
-#  Now overlay the county on the zips
+#  Now overlay the county on the zips.
+#
+#  The "how" keyword determines which slices are returned when the two layers
+#  don't overlap exactly: "union" returns all slices (essentially an outer
+#  join), "intersection" only returns slices that are part of both layers
+#  (essentially an inner join), "symmetric difference" returns slices that
+#  are part of one layer but not the other, and "difference" returns slices
+#  that are part of the left dataframe but not part of the right.
 #
 
 print( '\nCounty:', len(county) )
@@ -54,8 +61,8 @@ slices = slices.dropna(subset='ZCTA5CE10')
 
 #%%
 #
-#  For convenience when plotting, fill in the county for the slices
-#  that didn't match
+#  For convenience when plotting, fill in the county field with a
+#  placeholder string for the slices that didn't match
 #
 
 slices['COUNTYFP'] = slices['COUNTYFP'].fillna('outside')
