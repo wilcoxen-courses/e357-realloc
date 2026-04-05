@@ -71,9 +71,9 @@ slices['COUNTYFP'] = slices['COUNTYFP'].fillna('outside')
 #  Now plot what matched and what didn't
 #
 
-fig1,ax1 = plt.subplots(dpi=300)
-slices.plot('COUNTYFP',edgecolor='yellow',linewidth=0.2,ax=ax1)
-ax1.axis('off')
+fig,ax = plt.subplots(dpi=300)
+slices.plot('COUNTYFP',edgecolor='yellow',linewidth=0.2,ax=ax)
+ax.axis('off')
 
 #%%
 #
@@ -110,10 +110,10 @@ print( slices.groupby('COUNTYFP')['s_pop'].sum() )
 #  Plot populations by slice to see where people live
 #
 
-fig1,ax1 = plt.subplots(dpi=300)
-slices.plot('s_pop',edgecolor='yellow',linewidth=0.2,legend=True,ax=ax1)
-county.boundary.plot(color='yellow',linewidth=1,ax=ax1)
-ax1.axis('off')
+fig,ax = plt.subplots(dpi=300)
+slices.plot('s_pop',edgecolor='yellow',linewidth=0.2,legend=True,ax=ax)
+county.boundary.plot(color='yellow',linewidth=1,ax=ax)
+ax.axis('off')
 
 #%%
 #

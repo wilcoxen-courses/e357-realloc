@@ -30,9 +30,11 @@ There are four deliverables: two scripts, **pop_by_bg.py** and **realloc.py**, o
 
 1. Set `var_string` to the result of using `.join()` to join the elements of `var_list` with commas.
 
-1. Set `api` to `"https://api.census.gov/data/2020/acs/acs5"`, the endpoint for the ACS 5-year results for 2020. _This differs from previous exercises, which used an earlier year_.
+1. Set `api` to `"https://api.census.gov/data/2020/acs/acs5"`, the endpoint for the ACS 5-year results for 2020. _This is the same as g25 but differs from earlier exercises, which used 2024_.
 
-1. Set up an appropriate payload and call the Census API. Use `var_string`  as the `get` clause, `"block group:*"` as the `for_clause`, and `"state:36 county:067"` as the `in_clause`.
+1. Use the same procedure as in previous exercises to read `apikey` from a file called `apikey.txt`.
+
+1. Set up an appropriate payload and call the Census API. Use `var_string` as the `get` clause, `"block group:*"` as the `for_clause`, `"state:36 county:067"` as the `in_clause`, and `"key":apikey` to specify your API key.
 
 1. Use the response from the server to construct a dataframe called `pop`.
 
